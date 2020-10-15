@@ -5,6 +5,11 @@ class User extends CI_Controller
 {
     public function index()
     {
-        echo "user";
+        // $data = $this->db->get('user')->result_array();
+        // var_dump($data);
+
+        $this->load->view('templates/header');
+        $this->load->view('templates/index');
+        $this->load->view('templates/footer');
     }
 }
