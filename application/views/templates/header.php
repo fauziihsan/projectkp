@@ -38,42 +38,47 @@
                 </a>
             </div>
             <div class="sidebar-wrapper">
-                <div class="user">
-                    <div class="photo">
-                        <img src="<?= base_url() ?>/assets/img/faces/avatar.jpg" />
-                    </div>
-                    <div class="info">
-                        <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                            <span>
-                                Tania Andrew
-                                <b class="caret"></b>
-                            </span>
-                        </a>
-                        <div class="clearfix"></div>
-                        <div class="collapse" id="collapseExample">
-                            <ul class="nav">
-                                <li>
-                                    <a href="#">
-                                        <span class="sidebar-mini">MP</span>
-                                        <span class="sidebar-normal">My Profile</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="sidebar-mini">EP</span>
-                                        <span class="sidebar-normal">Edit Profile</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="sidebar-mini">S</span>
-                                        <span class="sidebar-normal">Settings</span>
-                                    </a>
-                                </li>
-                            </ul>
+                <?php if ($this->session->userdata('id_user') == TRUE) : ?>
+                    <div class="user">
+                        <div class="photo">
+                            <img src="<?= base_url() ?>/assets/img/faces/avatar.jpg" />
+                        </div>
+                        <div class="info">
+                            <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                                <span>
+                                    Tania Andrew
+                                    <b class="caret"></b>
+                                </span>
+                            </a>
+                            <div class="clearfix"></div>
+                            <div class="collapse" id="collapseExample">
+                                <ul class="nav">
+                                    <li>
+                                        <a href="#">
+                                            <span class="sidebar-mini">MP</span>
+                                            <span class="sidebar-normal">My Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="sidebar-mini">EP</span>
+                                            <span class="sidebar-normal">Edit Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="sidebar-mini">S</span>
+                                            <span class="sidebar-normal">Settings</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                <?php endif; ?>
+
+
                 <ul class="nav">
                     <li class="active">
                         <a href="./dashboard.html">
@@ -91,20 +96,20 @@
                         <div class="collapse" id="pagesExamples">
                             <ul class="nav">
                                 <li>
-                                    <a href="./pages/pricing.html">
-                                        <span class="sidebar-mini">P</span>
+                                    <a href="<?= base_url() ?>surat/surat_masuk">
+                                        <span class="sidebar-mini">M</span>
                                         <span class="sidebar-normal">Surat Masuk</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./pages/timeline.html">
-                                        <span class="sidebar-mini">T</span>
+                                    <a href="<?= base_url() ?>surat/surat_keluar">
+                                        <span class="sidebar-mini">K</span>
                                         <span class="sidebar-normal">Surat Keluar</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./pages/login.html">
-                                        <span class="sidebar-mini">LP</span>
+                                    <a href="<?= base_url() ?>surat/surat_keterangan">
+                                        <span class="sidebar-mini">SK</span>
                                         <span class="sidebar-normal">Surat Keterangan</span>
                                     </a>
                                 </li>
@@ -244,42 +249,35 @@
                             </ul>
                         </div>
                     </li>
+
                     <li>
-                        <a data-toggle="collapse" href="#mapsExamples">
+                        <a href="<?= base_url() ?>user">
                             <i class="material-icons">place</i>
-                            <p>Management User
-                                <b class="caret"></b>
-                            </p>
-                        </a>
-                        <div class="collapse" id="mapsExamples">
-                            <ul class="nav">
-                                <li>
-                                    <a href="./maps/google.html">
-                                        <span class="sidebar-mini">GM</span>
-                                        <span class="sidebar-normal">Google Maps</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./maps/fullscreen.html">
-                                        <span class="sidebar-mini">FSM</span>
-                                        <span class="sidebar-normal">Full Screen Map</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./maps/vector.html">
-                                        <span class="sidebar-mini">VM</span>
-                                        <span class="sidebar-normal">Vector Map</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="./widgets.html">
-                            <i class="material-icons">logout</i>
-                            <p>Logout</p>
+                            <p>Management User</p>
                         </a>
                     </li>
+
+                    <?php if ($this->session->userdata('id_user') == TRUE) : ?>
+
+                        <li>
+                            <a href="<?= base_url() ?>logout">
+                                <i class="material-icons">logout</i>
+                                <p>Logout</p>
+                            </a>
+                        </li>
+
+                    <?php else : ?>
+
+                        <li>
+                            <a href="<?= base_url() ?>auth/login">
+                                <i class="material-icons">login</i>
+                                <p>Login</p>
+                            </a>
+                        </li>
+
+                    <?php endif; ?>
+
+
 
                 </ul>
             </div>
@@ -304,45 +302,21 @@
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
+
+
+
                             <li>
-                                <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="material-icons">dashboard</i>
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
+                                <a href="<?= base_url() ?>auth/login" class="dropdown-toggle">
+                                    <i class="material-icons">login</i>
+                                    <p class="hidden-lg hidden-md">Login</p>
                                 </a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="material-icons">notifications</i>
-                                    <span class="notification">5</span>
-                                    <p class="hidden-lg hidden-md">
-                                        Notifications
-                                        <b class="caret"></b>
-                                    </p>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#">Mike John responded to your email</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">You have 5 new tasks</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">You're now friend with Andrew</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Another Notification</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Another One</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="material-icons">person</i>
                                     <p class="hidden-lg hidden-md">Profile</p>
                                 </a>
-                            </li>
+                            </li> -->
                             <li class="separator hidden-lg hidden-md"></li>
                         </ul>
                         <form class="navbar-form navbar-right" role="search">

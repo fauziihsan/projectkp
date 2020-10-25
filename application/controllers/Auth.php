@@ -8,8 +8,8 @@ class Auth extends CI_Controller
     {
         parent::__construct();
         $this->load->model('auth_model', 'auth');
-        if ($this->session->userdata('id_pengguna') == TRUE) {
-            redirect(base_url("beranda"));
+        if ($this->session->userdata('id_user') == TRUE) {
+            redirect(base_url("dashboard"));
         }
     }
 
@@ -27,7 +27,7 @@ class Auth extends CI_Controller
 
             $where = [
                 'username' => $user,
-                'password' => md5($pass)
+                'password' => $pass
             ];
 
             $cek = $this->auth->cek_pengguna($where)->num_rows();
@@ -37,27 +37,25 @@ class Auth extends CI_Controller
                 redirect(base_url("auth/login"));
             } else {
                 $cek_akun = $this->auth->cek_akun($where)->row_array();
-                $id_pengguna = $cek_akun["id_pengguna"];
-                $level = $cek_akun["level"];
+                $id_user = $cek_akun["id_user"];
+                // $level = $cek_akun["level"];
 
                 $data_session = array(
-                    'id_pengguna' => $id_pengguna,
-                    'level' => $level
+                    'id_user' => $id_user
+                    // 'level' => $level
                 );
 
                 $this->session->set_userdata($data_session);
 
-                redirect(base_url("beranda"));
+                redirect(base_url("dashboard"));
             }
         }
     }
 
-    // public function logout(){
-    // 	if ($this->input->post('logout') == 1) {
-    // 		$this->session->sess_destroy();
-    // 		redirect(base_url('auth/login'));
-    // 		die();
-    // 	}
+    // public function logout()
+    // {
+    //     $this->session->sess_destroy();
+    //     redirect(base_url('auth/login'));
     // }
 
     private function _sendEmail($token, $type)
