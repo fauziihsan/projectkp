@@ -21,7 +21,7 @@ class Dashboard extends CI_Controller
             'sub_title' => ''
         ];
         $this->load->view('templates/header', $judul);
-        $this->load->view('templates/index');
+        $this->load->view('dashboard/index');
         $this->load->view('templates/footer');
     }
 }

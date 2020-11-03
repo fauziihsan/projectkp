@@ -32,7 +32,7 @@
                                         <th>No</th>
                                         <th>Username</th>
                                         <th>Password</th>
-                                        <th>Level</th>
+                                        <th>Hak Akses</th>
                                         <th class="disabled-sorting text-right">Actions</th>
                                     </tr>
                                 </thead>
@@ -41,7 +41,7 @@
                                         <th>No</th>
                                         <th>Username</th>
                                         <th>Password</th>
-                                        <th>Level</th>
+                                        <th>Hak Akses</th>
                                         <th class="text-right">Actions</th>
                                     </tr>
                                 </tfoot>
@@ -56,7 +56,7 @@
                                             <td><?= $key['level']; ?></td>
                                             <td class="text-right">
                                                 <!-- <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a> -->
-                                                <!-- <a href="<?= base_url() ?>user/edit/<?= $key['id_user']; ?>" class="btn btn-simple btn-warning btn-icon"><i class="material-icons">edit</i></a> -->
+                                                <a href="<?= base_url() ?>user/edit/<?= $key['id_user']; ?>" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">edit</i></a>
 
                                                 <!-- <button class="btn btn-simple btn-warning btn-icon" data-toggle="modal" data-target="#smallAlertModal"><i class="material-icons">edit</i></button> -->
 

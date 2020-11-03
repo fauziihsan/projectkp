@@ -46,7 +46,7 @@ class Surat extends CI_Controller
             $keterangan_surat =  $this->input->post("keterangan_surat", TRUE);
             // $file_surat =  $this->input->post("file_surat", TRUE);
 
-            $config['upload_path']          = './uploads';
+            $config['upload_path']          = './uploads/surat_masuk';
             $config['allowed_types']        = 'pdf|doc|docx';
             $this->load->library('upload', $config);
 
@@ -71,6 +71,10 @@ class Surat extends CI_Controller
 
     public function hapusSuratMasuk($id)
     {
+
+        $data = $this->db->get_where('surat_masuk', ['id_surat_masuk' => $id])->row_array();
+
+        unlink("./uploads/surat_masuk/" . $data['file_surat_masuk']);
 
         $this->db->where(['id_surat_masuk' => $id]);
 
