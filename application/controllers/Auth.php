@@ -38,11 +38,11 @@ class Auth extends CI_Controller
             } else {
                 $cek_akun = $this->auth->cek_akun($where)->row_array();
                 $id_user = $cek_akun["id_user"];
-                // $level = $cek_akun["level"];
+                $level = $cek_akun["level"];
 
                 $data_session = array(
-                    'id_user' => $id_user
-                    // 'level' => $level
+                    'id_user' => $id_user,
+                    'level' => $level
                 );
 
                 $this->session->set_userdata($data_session);

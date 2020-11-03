@@ -1,26 +1,22 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class User extends CI_Controller
+class Pegawai extends CI_Controller
 {
 
-    // public function __construct()
-    // {
-    //     parent::__construct();
-    //     $this->load->model('dashboard_model', 'dashboard');
-    // }
+
 
     public function index()
     {
 
         $judul = [
-            'title' => 'Management User',
+            'title' => 'Management Pegawai',
             'sub_title' => ''
         ];
 
-        $data['data'] = $this->db->get('user')->result_array();
+        $data['data'] = $this->db->get('pegawai')->result_array();
         $this->load->view('templates/header', $judul);
-        $this->load->view('user/index', $data);
+        $this->load->view('pegawai/index', $data);
         $this->load->view('templates/footer');
     }
 
@@ -35,6 +31,6 @@ class User extends CI_Controller
     public function tambah()
     {
         $this->session->set_flashdata('success', 'User Berhasil Ditambah!');
-        redirect(base_url('user'));
+        redirect(base_url('pegawai'));
     }
 }

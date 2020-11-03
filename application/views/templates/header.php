@@ -80,34 +80,60 @@
 
 
                 <ul class="nav">
-                    <li class="active">
-                        <a href="./dashboard.html">
+                    <li class="<?php if ($title == 'Dashboard') : ?>
+                        <?= 'active'; ?>
+                    <?php endif; ?>
+                    ">
+                        <a href="<?= base_url() ?>">
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
                     </li>
-                    <li>
+
+                    <li class="
+                    <?php if ($title == 'Management Surat') : ?>
+                        <?= 'active'; ?>
+                    <?php endif; ?>
+                    ">
                         <a data-toggle="collapse" href="#pagesExamples">
                             <i class="material-icons">image</i>
                             <p>Management Surat
                                 <b class="caret"></b>
                             </p>
                         </a>
-                        <div class="collapse" id="pagesExamples">
+                        <div class="
+                        <?php if ($title == 'Management Surat') : ?>
+                            <?= 'collapse in'; ?>
+                        <?php else : ?>
+                            <?= 'collapse'; ?>
+                        <?php endif; ?>
+                        " id="pagesExamples">
                             <ul class="nav">
-                                <li>
+                                <li class="
+                                <?php if ($sub_title == 'Surat Masuk') : ?>
+                                    <?= 'active'; ?>
+                                <?php endif; ?>
+                                ">
                                     <a href="<?= base_url() ?>surat/surat_masuk">
                                         <span class="sidebar-mini">M</span>
                                         <span class="sidebar-normal">Surat Masuk</span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="
+                                <?php if ($sub_title == 'Surat Keluar') : ?>
+                                    <?= 'active'; ?>
+                                <?php endif; ?>
+                                ">
                                     <a href="<?= base_url() ?>surat/surat_keluar">
                                         <span class="sidebar-mini">K</span>
                                         <span class="sidebar-normal">Surat Keluar</span>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="
+                                <?php if ($sub_title == 'Surat Keterangan') : ?>
+                                    <?= 'active'; ?>
+                                <?php endif; ?>
+                                ">
                                     <a href="<?= base_url() ?>surat/surat_keterangan">
                                         <span class="sidebar-mini">SK</span>
                                         <span class="sidebar-normal">Surat Keterangan</span>
@@ -117,7 +143,11 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="
+                    <?php if ($title == 'Template Surat') : ?>
+                        <?= 'active'; ?>
+                    <?php endif; ?>
+                    ">
                         <a data-toggle="collapse" href="#componentsExamples">
                             <i class="material-icons">apps</i>
                             <p>Template Surat
@@ -171,7 +201,11 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="
+                    <?php if ($title == 'Galery') : ?>
+                        <?= 'active'; ?>
+                    <?php endif; ?>
+                    ">
                         <a data-toggle="collapse" href="#formsExamples">
                             <i class="material-icons">content_paste</i>
                             <p>Galery
@@ -219,43 +253,33 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
-                        <a data-toggle="collapse" href="#tablesExamples">
-                            <i class="material-icons">grid_on</i>
-                            <p>Management Pegawai
-                                <b class="caret"></b>
-                            </p>
-                        </a>
-                        <div class="collapse" id="tablesExamples">
-                            <ul class="nav">
-                                <li>
-                                    <a href="./tables/regular.html">
-                                        <span class="sidebar-mini">RT</span>
-                                        <span class="sidebar-normal">Regular Tables</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./tables/extended.html">
-                                        <span class="sidebar-mini">ET</span>
-                                        <span class="sidebar-normal">Extended Tables</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./tables/datatables.net.html">
-                                        <span class="sidebar-mini">DT</span>
-                                        <span class="sidebar-normal">DataTables.net</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
 
-                    <li>
-                        <a href="<?= base_url() ?>user">
-                            <i class="material-icons">place</i>
-                            <p>Management User</p>
-                        </a>
-                    </li>
+                    <?php if ($this->session->userdata('level') == 'administrator') : ?>
+
+
+                        <li class="
+                        <?php if ($title == 'Management Pegawai') : ?>
+                            <?= 'active'; ?>
+                        <?php endif; ?>
+                            ">
+                            <a href="<?= base_url() ?>pegawai">
+                                <i class="material-icons">place</i>
+                                <p>Management Pegawai</p>
+                            </a>
+                        </li>
+
+                        <li class="
+                        <?php if ($title == 'Management User') : ?>
+                            <?= 'active'; ?>
+                        <?php endif; ?>
+                            ">
+                            <a href="<?= base_url() ?>user">
+                                <i class="material-icons">place</i>
+                                <p>Management User</p>
+                            </a>
+                        </li>
+
+                    <?php endif; ?>
 
                     <?php if ($this->session->userdata('id_user') == TRUE) : ?>
 
@@ -298,7 +322,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"> Dashboard </a>
+                        <a class="navbar-brand" href="#"> <?= $title; ?> </a>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">

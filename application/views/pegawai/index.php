@@ -7,10 +7,10 @@
                         <i class="material-icons">people</i>
                     </div>
                     <div class="card-content">
-                        <h4 class="card-title">User</h4>
+                        <h4 class="card-title">Pegawai</h4>
                         <div class="toolbar">
                             <!--        Here you can write extra buttons/actions for the toolbar              -->
-                            <a href="<?= base_url() ?>user/tambah">
+                            <a href="<?= base_url() ?>pegawai/tambah">
                                 <button class="btn btn-info">
                                     <span class="btn-label">
                                         <i class="material-icons">check</i>
@@ -30,18 +30,18 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Username</th>
-                                        <th>Password</th>
-                                        <th>Level</th>
+                                        <th>Nama</th>
+                                        <th>Nip</th>
+                                        <th>Tempat Lahir</th>
                                         <th class="disabled-sorting text-right">Actions</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
                                         <th>No</th>
-                                        <th>Username</th>
-                                        <th>Password</th>
-                                        <th>Level</th>
+                                        <th>Nama</th>
+                                        <th>Nip</th>
+                                        <th>Tempat Lahir</th>
                                         <th class="text-right">Actions</th>
                                     </tr>
                                 </tfoot>
@@ -51,9 +51,9 @@
                                     <?php foreach ($data as $key) : ?>
                                         <tr>
                                             <td><?= $no; ?></td>
-                                            <td><?= $key['username']; ?></td>
-                                            <td><?= $key['password']; ?></td>
-                                            <td><?= $key['level']; ?></td>
+                                            <td><?= $key['nama_pegawai']; ?></td>
+                                            <td><?= $key['nip']; ?></td>
+                                            <td><?= $key['tempat_lahir']; ?></td>
                                             <td class="text-right">
                                                 <!-- <a href="#" class="btn btn-simple btn-info btn-icon like"><i class="material-icons">favorite</i></a> -->
                                                 <!-- <a href="<?= base_url() ?>user/edit/<?= $key['id_user']; ?>" class="btn btn-simple btn-warning btn-icon"><i class="material-icons">edit</i></a> -->
@@ -61,7 +61,7 @@
                                                 <!-- <button class="btn btn-simple btn-warning btn-icon" data-toggle="modal" data-target="#smallAlertModal"><i class="material-icons">edit</i></button> -->
 
 
-                                                <button class="btn btn-simple btn-warning btn-icon" data-toggle="modal" data-target="#hapusUser<?= $key['id_user']; ?>"><i class="material-icons">close</i></button>
+                                                <button class="btn btn-simple btn-warning btn-icon" data-toggle="modal" data-target="#hapusPegawai<?= $key['id_pegawai']; ?>"><i class="material-icons">close</i></button>
 
                                                 <!-- <a href="<?= base_url() ?>user/hapus/<?= $key['id_user']; ?>" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a> -->
                                             </td>
