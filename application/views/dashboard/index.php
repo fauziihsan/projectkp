@@ -112,28 +112,29 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card card-chart">
-                    <div class="card-header" data-background-color="rose" data-header-animation="true">
+                    <div class="card-header" data-background-color="green" data-header-animation="true">
                         <div class="ct-chart" id="websiteViewsChart"></div>
+                        <!-- <canvas id="myChart" width="400" height="300"></canvas> -->
                     </div>
                     <div class="card-content">
-                        <h4 class="card-title">Global Sales by Top Locations</h4>
+                        <h4 class="card-title">Surat Masuk</h4>
                         <div class="card-actions">
-                            <button type="button" class="btn btn-danger btn-simple fix-broken-card">
+                            <!-- <button type="button" class="btn btn-danger btn-simple fix-broken-card">
                                 <i class="material-icons">build</i> Fix Header!
-                            </button>
+                            </button> -->
                             <button type="button" class="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
                                 <i class="material-icons">refresh</i>
                             </button>
-                            <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
+                            <!-- <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
                                 <i class="material-icons">edit</i>
-                            </button>
+                            </button> -->
                         </div>
-                        <h4 class="card-title">Website Views</h4>
-                        <p class="category">Last Campaign Performance</p>
+                        <!-- <h4 class="card-title">Website Views</h4> -->
+                        <p class="category">Surat Masuk Setahun Terakhir</p>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">access_time</i> campaign sent 2 days ago
+                            <i class="material-icons">access_time</i> Terakhir tanggal 04/11/2020
                         </div>
                     </div>
                 </div>
@@ -145,23 +146,23 @@
                     </div>
                     <div class="card-content">
                         <div class="card-actions">
-                            <button type="button" class="btn btn-danger btn-simple fix-broken-card">
+                            <!-- <button type="button" class="btn btn-danger btn-simple fix-broken-card">
                                 <i class="material-icons">build</i> Fix Header!
-                            </button>
+                            </button> -->
                             <button type="button" class="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
                                 <i class="material-icons">refresh</i>
                             </button>
-                            <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
+                            <!-- <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
                                 <i class="material-icons">edit</i>
-                            </button>
+                            </button> -->
                         </div>
-                        <h4 class="card-title">Daily Sales</h4>
+                        <h4 class="card-title">Surat Keluar</h4>
                         <p class="category">
-                            <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+                            <span class="text-success"></span> Surat Keluar Setahun Terakhir</p>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">access_time</i> updated 4 minutes ago
+                            <i class="material-icons">access_time</i> Terakhir tanggal 04/11/2020
                         </div>
                     </div>
                 </div>
@@ -173,22 +174,22 @@
                     </div>
                     <div class="card-content">
                         <div class="card-actions">
-                            <button type="button" class="btn btn-danger btn-simple fix-broken-card">
+                            <!-- <button type="button" class="btn btn-danger btn-simple fix-broken-card">
                                 <i class="material-icons">build</i> Fix Header!
-                            </button>
+                            </button> -->
                             <button type="button" class="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
                                 <i class="material-icons">refresh</i>
                             </button>
-                            <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
+                            <!-- <button type="button" class="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
                                 <i class="material-icons">edit</i>
-                            </button>
+                            </button> -->
                         </div>
-                        <h4 class="card-title">Completed Tasks</h4>
-                        <p class="category">Last Campaign Performance</p>
+                        <h4 class="card-title">Surat Keluar</h4>
+                        <p class="category">Surat Keterangan Setahun Terakhir</p>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">access_time</i> campaign sent 2 days ago
+                            <i class="material-icons">access_time</i> Terakhir tanggal 04/11/2020
                         </div>
                     </div>
                 </div>
@@ -198,16 +199,16 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="orange">
-                        <i class="material-icons">weekend</i>
+                        <i class="material-icons">mark_email_read</i>
                     </div>
                     <div class="card-content">
-                        <p class="category">Bookings</p>
-                        <h3 class="card-title">184</h3>
+                        <p class="category">Surat Masuk</p>
+                        <h3 class="card-title"><?= $this->db->get('surat_masuk')->num_rows(); ?></h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons text-danger">warning</i>
-                            <a href="#pablo">Get More Space...</a>
+                            <i class="material-icons text-primary">info</i>
+                            <a href="#">Jumlah Surat Masuk</a>
                         </div>
                     </div>
                 </div>
@@ -215,15 +216,15 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="rose">
-                        <i class="material-icons">equalizer</i>
+                        <i class="material-icons">mark_email_unread</i>
                     </div>
                     <div class="card-content">
-                        <p class="category">Website Visits</p>
-                        <h3 class="card-title">75.521</h3>
+                        <p class="category">Surat Keluar</p>
+                        <h3 class="card-title"><?= $this->db->get('surat_keluar')->num_rows(); ?></h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">local_offer</i> Tracked from Google Analytics
+                            <i class="material-icons">info</i> Jumlah Surat Keluar
                         </div>
                     </div>
                 </div>
@@ -231,15 +232,15 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="green">
-                        <i class="material-icons">store</i>
+                        <i class="material-icons">mail</i>
                     </div>
                     <div class="card-content">
-                        <p class="category">Revenue</p>
-                        <h3 class="card-title">$34,245</h3>
+                        <p class="category">Surat Keterangan</p>
+                        <h3 class="card-title"><?= $this->db->get('surat_keterangan')->num_rows(); ?></h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">date_range</i> Last 24 Hours
+                            <i class="material-icons">info</i> Jumlah Surat Keterangan
                         </div>
                     </div>
                 </div>
@@ -247,15 +248,15 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="blue">
-                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-user"></i>
                     </div>
                     <div class="card-content">
-                        <p class="category">Followers</p>
-                        <h3 class="card-title">+245</h3>
+                        <p class="category">User</p>
+                        <h3 class="card-title"><?= $this->db->get('user')->num_rows(); ?></h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">update</i> Just Updated
+                            <i class="material-icons">info</i> Jumlah User
                         </div>
                     </div>
                 </div>

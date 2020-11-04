@@ -41,36 +41,41 @@
                 <?php if ($this->session->userdata('id_user') == TRUE) : ?>
                     <div class="user">
                         <div class="photo">
-                            <img src="<?= base_url() ?>/assets/img/faces/avatar.jpg" />
+                            <img src="<?= base_url() ?>/assets/img/default-avatar.png" />
                         </div>
                         <div class="info">
                             <a data-toggle="collapse" href="#collapseExample" class="collapsed">
                                 <span>
-                                    Tania Andrew
+                                    <?php
+
+                                    $data = $this->db->get_where('user', ['id_user' => $this->session->userdata('id_user')])->row_array();
+
+                                    ?>
+                                    <?= ucfirst($data['username']); ?>
                                     <b class="caret"></b>
                                 </span>
                             </a>
                             <div class="clearfix"></div>
                             <div class="collapse" id="collapseExample">
                                 <ul class="nav">
-                                    <li>
+                                    <!-- <li>
                                         <a href="#">
                                             <span class="sidebar-mini">MP</span>
                                             <span class="sidebar-normal">My Profile</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li>
-                                        <a href="#">
+                                        <a href="<?= base_url() ?>/user/edit/<?= $this->session->userdata('id_user'); ?>">
                                             <span class="sidebar-mini">EP</span>
                                             <span class="sidebar-normal">Edit Profile</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="#">
                                             <span class="sidebar-mini">S</span>
                                             <span class="sidebar-normal">Settings</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
