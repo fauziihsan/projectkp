@@ -6,7 +6,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="<?= base_url() ?>assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Material Dashboard Pro by Creative Tim</title>
+    <title>Login Sistem Informasi</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     <!-- Bootstrap core CSS     -->
@@ -31,9 +31,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href=" ../dashboard.html ">Material Dashboard Pro</a>
+                <a class="navbar-brand" href=" ../dashboard.html ">Sisem Informasi</a>
             </div>
-            <div class="collapse navbar-collapse">
+            <!-- <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="../dashboard.html">
@@ -56,7 +56,7 @@
                         </a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </nav>
     <div class="wrapper wrapper-full-page">
@@ -148,7 +148,7 @@
             </div>
             <footer class="footer">
                 <div class="container">
-                    <nav class="pull-left">
+                    <!-- <nav class="pull-left">
                         <ul>
                             <li>
                                 <a href="#">
@@ -171,13 +171,13 @@
                                 </a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav> -->
                     <p class="copyright pull-right">
                         &copy;
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                        <a href="#">Anonymous</a>, made with love for a better web
                     </p>
                 </div>
             </footer>

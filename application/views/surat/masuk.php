@@ -64,6 +64,8 @@
                                                 <button class="btn btn-simple btn-info" data-toggle="modal" data-target="#lihatSurat<?= $key['id_surat_masuk']; ?>"><i class="material-icons">remove_red_eye</i></button>
                                             </td>
                                             <td class="text-right">
+
+                                                <a href="<?= base_url() ?>surat/editSuratMasuk/<?= $key['id_surat_masuk']; ?>" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">edit</i></a>
                                                 <button class="btn btn-simple btn-warning btn-icon" data-toggle="modal" data-target="#hapusSuratMasuk<?= $key['id_surat_masuk']; ?>"><i class="material-icons">close</i></button>
                                             </td>
                                         </tr>
@@ -86,7 +88,7 @@
 
                                         <form method="post" action="<?= base_url(); ?>surat/hapusSuratMasuk/<?= $key['id_surat_masuk']; ?>">
                                             <div class="modal-body text-center">
-                                                <h5>Apakah anda yakin untuk menghapus user? </h5>
+                                                <h5>Apakah anda yakin untuk menghapus surat masuk? </h5>
                                             </div>
                                             <div class="modal-footer text-center">
                                                 <button type="button" class="btn btn-simple" data-dismiss="modal">Tidak</button>

@@ -9,31 +9,31 @@
                         <i class="material-icons">mail_outline</i>
                     </div>
                     <div class="card-content">
-                        <h4 class="card-title">Tambah Surat Masuk</h4>
+                        <h4 class="card-title">Edit Surat Masuk</h4>
 
                         <div class="form-group">
                             <label class="label-control">Nama Surat</label>
-                            <input class="form-control" name="nama_surat" id="nama_surat" type="text" value="<?= set_value('nama_surat'); ?>" />
+                            <input class="form-control" name="nama_surat" id="nama_surat" type="text" value="<?= $surat_masuk['nama_surat_masuk']; ?>" required="true" />
                         </div>
-                        <?= form_error('nama_surat', '<div class="text-danger">', '</div>'); ?>
 
                         <div class="form-group">
                             <label class="label-control">Tanggal Surat</label>
-                            <input type="text" class="form-control datepicker" name="tanggal_surat" id="tanggal_surat" value="10/10/2016" />
+                            <input type="text" class="form-control datepicker" name="tanggal_surat" id="tanggal_surat" value="<?= $surat_masuk['tanggal_surat_masuk']; ?>" />
                         </div>
-                        <?= form_error('tanggal_surat', '<div class="text-danger">', '</div>'); ?>
 
                         <div class="form-group">
                             <label class="label-control">Keterangan Surat</label>
-                            <input class="form-control" name="keterangan_surat" id="keterangan_surat" type="text" <?= set_value('keterangan_surat'); ?> />
+                            <input class="form-control" name="keterangan_surat" id="keterangan_surat" value="<?= $surat_masuk['keterangan_surat_masuk']; ?>" type="text" required="true" />
                         </div>
-                        <?= form_error('keterangan_surat', '<div class="text-danger">', '</div>'); ?>
 
                         <div class="form-group">
                             <label class="label-control">File Surat</label>
+
+
+
                             <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                 <div class="fileinput-new thumbnail">
-                                    <!-- <img src="<?= base_url() ?>assets/save.png" alt="..."> -->
+                                    <!-- <img src="<?= base_url('./uploads/surat_masuk/') ?>" alt="..."> -->
                                 </div>
                                 <div class="fileinput-preview fileinput-exists thumbnail"></div>
                                 <div>
@@ -47,7 +47,6 @@
                                 </div>
                             </div>
                         </div>
-                        <?= form_error('file_surat', '<div class="text-danger">', '</div>'); ?>
 
                         <div class="category form-category">
                             <div class="form-footer text-right">

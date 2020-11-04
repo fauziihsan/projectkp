@@ -6,7 +6,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="<?= base_url() ?>/assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="<?= base_url() ?>/assets/img/favicon.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Dashboard</title>
+    <title><?= $title; ?></title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
     <!-- Bootstrap core CSS     -->
@@ -31,10 +31,10 @@
     -->
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-                    CT
+                    SI
                 </a>
                 <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                    Creative Tim
+                    Sistem Informasi
                 </a>
             </div>
             <div class="sidebar-wrapper">
@@ -96,7 +96,7 @@
                     <?php endif; ?>
                     ">
                         <a data-toggle="collapse" href="#pagesExamples">
-                            <i class="material-icons">image</i>
+                            <i class="material-icons">email</i>
                             <p>Management Surat
                                 <b class="caret"></b>
                             </p>
@@ -149,7 +149,7 @@
                     <?php endif; ?>
                     ">
                         <a data-toggle="collapse" href="#componentsExamples">
-                            <i class="material-icons">apps</i>
+                            <i class="material-icons">contact_mail</i>
                             <p>Template Surat
                                 <b class="caret"></b>
                             </p>
@@ -162,42 +162,8 @@
                                         <span class="sidebar-normal">Buttons</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="./components/grid.html">
-                                        <span class="sidebar-mini">GS</span>
-                                        <span class="sidebar-normal">Grid System</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./components/panels.html">
-                                        <span class="sidebar-mini">P</span>
-                                        <span class="sidebar-normal">Panels</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./components/sweet-alert.html">
-                                        <span class="sidebar-mini">SA</span>
-                                        <span class="sidebar-normal">Sweet Alert</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./components/notifications.html">
-                                        <span class="sidebar-mini">N</span>
-                                        <span class="sidebar-normal">Notifications</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./components/icons.html">
-                                        <span class="sidebar-mini">I</span>
-                                        <span class="sidebar-normal">Icons</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./components/typography.html">
-                                        <span class="sidebar-mini">T</span>
-                                        <span class="sidebar-normal">Typography</span>
-                                    </a>
-                                </li>
+
+
                             </ul>
                         </div>
                     </li>
@@ -207,7 +173,7 @@
                     <?php endif; ?>
                     ">
                         <a data-toggle="collapse" href="#formsExamples">
-                            <i class="material-icons">content_paste</i>
+                            <i class="material-icons">image</i>
                             <p>Galery
                                 <b class="caret"></b>
                             </p>
@@ -263,7 +229,7 @@
                         <?php endif; ?>
                             ">
                             <a href="<?= base_url() ?>pegawai">
-                                <i class="material-icons">place</i>
+                                <i class="material-icons">supervised_user_circle</i>
                                 <p>Management Pegawai</p>
                             </a>
                         </li>
@@ -274,7 +240,7 @@
                         <?php endif; ?>
                             ">
                             <a href="<?= base_url() ?>user">
-                                <i class="material-icons">place</i>
+                                <i class="material-icons">people</i>
                                 <p>Management User</p>
                             </a>
                         </li>

@@ -9,7 +9,7 @@
                         <i class="material-icons">mail_outline</i>
                     </div>
                     <div class="card-content">
-                        <h4 class="card-title">Tambah Surat Masuk</h4>
+                        <h4 class="card-title">Tambah Surat Keluar</h4>
 
                         <div class="form-group">
                             <label class="label-control">Nama Surat</label>
